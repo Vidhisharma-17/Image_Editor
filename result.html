@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+    <h2>Edited Image</h2>
+    <img src="{{ url_for('uploaded_file', filename=filename) }}" width="300"><br><br>
+
+    <!-- Download Button -->
+    <a href="{{ url_for('uploaded_file', filename=filename) }}" download="edited_image.jpg">
+        <button>Download Result</button>
+    </a>
+    <br><br>
+
+    <a href="/">Upload Another</a>
+</body>
+</html>
