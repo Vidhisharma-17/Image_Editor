@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Image</title>
+</head>
+<body>
+    <h2>Edit Your Image</h2>
+    <img src="{{ url_for('uploaded_file', filename=filename) }}" width="300"><br><br>
+
+    <form action="/edit/{{ filename }}" method="post">
+        <select name="operation">
+            <option value="grayscale">Grayscale</option>
+            <option value="flip">Flip</option>
+            <option value="rotate">Rotate</option>
+            <option value="resize">Resize (200x200)</option>
+            <option value="crop">Crop (50:250)</option>
+            <option value="text">Add Text</option>
+            <option value="line">Draw Line</option>
+            <option value="rectangle">Draw Rectangle</option>
+            <option value="circle">Draw Circle</option>
+        </select>
+        <button type="submit">Apply</button>
+    </form>
+</body>
+</html>
